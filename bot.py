@@ -67,8 +67,9 @@ def get_all(contacts):
 
 @input_error
 def add_birthday(args,contacts):
-    name,date = args
-    contacts.find(name).add_birthday(date)
+    name, date = args
+    record = contacts.find(name)
+    record.add_birthday(date)
     return f"added birth date for {name}"
 
 

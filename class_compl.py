@@ -30,7 +30,7 @@ class Birthday(Field):
     def eq(self, other):
         return self.value == other.value
 
-    def str(self):
+    def __str__(self):
         return self.value.strftime(DATE_FORMAT)
 
 
@@ -38,6 +38,7 @@ class Record:
     def __init__(self, name):
         self.name = Name(name)
         self.phones = []
+        self.birthday = None
 
     def add_phone(self, phone):
         try:
@@ -115,7 +116,7 @@ class AddressBook(UserDict):
 
         for user in users:
             name = user["name"]
-            birthday = user["birthday"].date()
+            birthday = user["birthday"]
             birthday_this_year = birthday.replace(year=today.year)
 
             if birthday_this_year < today:
