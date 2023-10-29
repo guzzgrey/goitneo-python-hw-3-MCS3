@@ -24,8 +24,8 @@ class Phone(Field):
 
 
 class Birthday(Field):
-    def init(self, value: str):
-        super().init(datetime.strptime(value, DATE_FORMAT).date())
+    def __init__(self, value: str):
+        super().__init__(datetime.strptime(value, DATE_FORMAT).date())
 
     def eq(self, other):
         return self.value == other.value

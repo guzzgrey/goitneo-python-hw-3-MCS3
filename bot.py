@@ -99,6 +99,9 @@ def main():
         " - 'change -> (username phone)' - to change a contact's phone number",
         " - 'phone -> (username)' - to get a contact's phone number",
         " - 'all' - to get all contacts",
+        " - 'add-birthday -> username -> date' - to add a date",
+        " - 'show-birthday -> username' - to show a date of birthday (Username)"
+        " - 'birthdays' - to show a date of birthday for all contacts"
         " - 'close' or 'exit' - to exit the bot"
         
         
